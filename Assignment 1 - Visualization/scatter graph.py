@@ -9,6 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def compare_last_year_fare(in_para):
+  '''compare the current year fare with the last year fare'''
   for count, value in enumerate(input_file_data['Year']):
     if value == in_para:
       current_year_fare = regional_fares_arr[count]

@@ -9,6 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def get_label(in_para):
+    '''decide appropriate lable according to input parameter'''
     if in_para == 'LS':
        result = 'London and South East'
     elif in_para == 'LD':   
@@ -22,8 +23,9 @@ def get_label(in_para):
     return result    
 
 def get_max_fare(in_para):
-  result = round(max(input_file_data[in_para]),2)
-  return result
+    '''returns maximum fare in all the time for input sector'''
+    result = round(max(input_file_data[in_para]),2)
+    return result
 
 input_file_data = pd.read_excel ('Average change of rail fares in Great Britain.xlsx')
 
